@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Feedback from './components/Feedback/Feedback';
 import Options from './components/Options/Options';
 import Notification from './components/Notification/Notification';
-import Description from './components/Description/Description'; // ✅ імпорт
+import Description from './components/Description/Description';
 
 const App = () => {
   const [feedbacks, setFeedbacks] = useState(() => {
