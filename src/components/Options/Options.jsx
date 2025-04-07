@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styles from './Options.module.css';
 
-const Options = ({ feedbacks, updateFeedback }) => {
+const Options = ({ updateFeedback, resetFeedback, total }) => {
     return (
         <div className={styles.buttons}>
             <button
@@ -10,25 +10,37 @@ const Options = ({ feedbacks, updateFeedback }) => {
             >
                 Good
             </button>
+
             <button
                 className={styles.button2}
                 onClick={() => updateFeedback('neutral')}
             >
                 Neutral
             </button>
+
             <button
                 className={styles.button3}
                 onClick={() => updateFeedback('bad')}
             >
                 Bad
             </button>
+            
+            {total > 0 && (
+                <button
+                    className={styles.buttonReset}
+                    onClick={resetFeedback}
+                >
+                    Reset
+                </button>
+            )}
         </div>
     );
 };
 
 Options.propTypes = {
-    feedbacks: PropTypes.object.isRequired,
     updateFeedback: PropTypes.func.isRequired,
+    resetFeedback: PropTypes.func.isRequired,
+    total: PropTypes.number.isRequired,
 };
 
 export default Options;

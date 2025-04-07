@@ -41,3 +41,16 @@
 .button3:hover {
     background-color: rgb(167, 0, 0);
 }
+
+.buttonReset {
+    padding: 10px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttonReset:hover {
+    background-color: #1976d2;
+}
